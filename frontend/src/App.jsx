@@ -58,8 +58,12 @@ export default function App() {
             <button style={devBtnStyle} onClick={() => setMode('dev')}>DEV</button>
             <button style={hackBtnStyle} onClick={() => setMode('hack')}>HACK</button>
           </div>
-          <div style={{ display: 'flex', gap: 8, fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: isDev ? '#6b665c' : nightMuted }}>
+         <div style={{ display: 'flex', gap: 8, fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: isDev ? '#6b665c' : nightMuted }}>
             <button style={langBtn('es')} onClick={() => setLang('es')}>ES</button>
+            <span>/</span>
+            <button style={langBtn('ca')} onClick={() => setLang('ca')}>CA</button>
+            <span>/</span>
+            <button style={langBtn('fr')} onClick={() => setLang('fr')}>FR</button>
             <span>/</span>
             <button style={langBtn('en')} onClick={() => setLang('en')}>EN</button>
           </div>
@@ -71,9 +75,9 @@ export default function App() {
       <footer style={styles.footer}>
         <span style={styles.muted}>&copy; 2026 {t.name}</span>
         <div style={{ display: 'flex', gap: 20 }}>
-          <a href="mailto:hello@example.com" style={styles.accentLink}>{t.email}</a>
-          <a href="#" style={styles.accentLink}>LinkedIn</a>
-          <a href="#" style={styles.accentLink}>GitHub</a>
+          <a href="mailto:joandomz91@proton.me" style={styles.accentLink}>{t.email}</a>
+          <a href="https://es.linkedin.com/in/joandomzfdez" style={styles.accentLink}>LinkedIn</a>
+          <a href="https://github.com/Juandomz91" style={styles.accentLink}>GitHub</a>
         </div>
       </footer>
     </div>

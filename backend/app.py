@@ -22,9 +22,9 @@ app = Flask(__name__)
 CORS(app)  # tighten to your real domain in production
 
 TRYHACKME_CACHE = {
-    "username": "tu-usuario-thm",
+    "username": "Cnidari",
     "rank": "Rango / puntos — pendiente",
-    "profileUrl": "https://tryhackme.com/p/tu-usuario-thm",
+    "profileUrl": "https://tryhackme.com/p/Cnidari",
     "rooms": [
         {"name": "Nombre de la room #1", "status": "completada"},
         {"name": "Nombre de la room #2", "status": "completada"},
