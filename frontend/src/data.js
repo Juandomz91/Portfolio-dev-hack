@@ -2,8 +2,8 @@ export const CONTENT = {
   es: {
     name: "Joan Domínguez Fernández",
     dev: {
-      kicker: "Portfolio — Edición Desarrollo",
-      headline: "Full-Stack & Producto",
+      kicker: "Portfolio — Desarrollo",
+      headline: "Desarrollo Full-Stack",
       sub: "React & Python, de la interfaz a la base de datos.",
       projectsLabel: "Proyectos",
       projects: [
@@ -14,13 +14,13 @@ export const CONTENT = {
       skills: ["React", "Python", "Flask", "REST APIs", "SQL", "Git", "CSS"]
     },
     hack: {
-      kicker: "Portfolio — Modo Seguridad",
+      kicker: "Portfolio — Ciberseguridad/Pentesting",
       headline: "romper_para_entender",
       sub: "Aprendiz de pentesting y CTFs. Rompo sistemas para aprender a protegerlos.",
       toolsLabel: "Herramientas propias",
       tools: [
-        { name: "nombre-herramienta-1.py", desc: "Breve descripción de qué hace y en qué está escrita — reemplaza con tu herramienta." },
-        { name: "nombre-herramienta-2.sh", desc: "Breve descripción de qué hace — reemplaza con tu herramienta." },
+        { name: "Portscanner.py", desc: "Escaneador de puertos construido en Python" },
+        { name: "arp_spoofer.py", desc: "script diseñado para enviar mensajes falsos dentro de una red local utilizando el protocolo ARP" },
         { name: "nombre-herramienta-3", desc: "Breve descripción de qué hace — reemplaza con tu herramienta." }
       ],
       writeupsLabel: "Writeups",
@@ -37,9 +37,9 @@ export const CONTENT = {
       ],
       tryhackmeLabel: "TryHackMe",
       tryhackme: {
-        username: "tu-usuario-thm",
+        username: "Cnidari-THM",
         rank: "Rango / puntos — pendiente",
-        profileUrl: "https://tryhackme.com/p/tu-usuario-thm",
+        profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
           { name: "Nombre de la room #1", status: "completada" },
           { name: "Nombre de la room #2", status: "completada" },
