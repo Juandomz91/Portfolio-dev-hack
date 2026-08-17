@@ -15,7 +15,7 @@ export const CONTENT = {
     },
     hack: {
       kicker: "Portfolio — Ciberseguridad/Pentesting",
-      headline: "romper_para_entender",
+      headline: "Girando_la_tortilla",
       sub: "Aprendiz de pentesting y CTFs. Rompo sistemas para aprender a protegerlos.",
       toolsLabel: "Herramientas propias",
       tools: [
@@ -41,7 +41,7 @@ export const CONTENT = {
         rank: "Cibertoyako / puntos — pendiente",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Nombre de la room #1", status: "completada" },
+          { name: "Pickle Rick", status: "completada" },
           { name: "Nombre de la room #2", status: "completada" },
           { name: "Nombre de la room #3", status: "en progreso" }
         ]
@@ -67,7 +67,7 @@ export const CONTENT = {
     },
     hack: {
       kicker: "Portfolio — Mode Sécurité",
-      headline: "casser_pour_comprendre",
+      headline: "renverser la vapeur",
       sub: "Apprenti en pentesting et CTF. Je casse des systèmes pour apprendre à les protéger.",
       toolsLabel: "Outils personnels",
       tools: [
@@ -93,7 +93,7 @@ export const CONTENT = {
         rank: "Rang / points — en attente",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Room #1", status: "terminée" },
+          { name: "Pickle Rick", status: "terminée" },
           { name: "Room #2", status: "terminée" },
           { name: "Room #3", status: "en cours" }
         ]
@@ -119,7 +119,7 @@ export const CONTENT = {
     },
     hack: {
       kicker: "Portfolio — Ciberseguretat/Pentesting",
-      headline: "trencar_per_entendre",
+      headline: "Tombant_la_truita",
       sub: "Aprenent de pentesting i CTFs. Trenco sistemes per aprendre a protegir-los.",
       toolsLabel: "Eines pròpies",
       tools: [
@@ -145,7 +145,7 @@ export const CONTENT = {
         rank: "Rang / punts — pendent",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Room #1", status: "completada" },
+          { name: "Pickle Rick", status: "completada" },
           { name: "Room #2", status: "completada" },
           { name: "Room #3", status: "en progrés" }
         ]
@@ -171,7 +171,7 @@ export const CONTENT = {
     },
     hack: {
       kicker: "Portfolio — Cibersecurity/Pentesting",
-      headline: "break_to_understand",
+      headline: "Flip_the_script",
       sub: "Pentesting & CTF learner. Breaking systems to learn how to protect them.",
       toolsLabel: "Tools I built",
       tools: [
@@ -197,7 +197,7 @@ export const CONTENT = {
         rank: "Rank / points — pending",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Room name #1", status: "completed" },
+          { name: "Pickle Rick", status: "completed" },
           { name: "Room name #2", status: "completed" },
           { name: "Room name #3", status: "in progress" }
         ]

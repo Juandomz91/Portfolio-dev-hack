@@ -1,16 +1,16 @@
 import { useEffect, useRef } from 'react';
 
-// Violet particle network that repels from and connects to the cursor.
+// Red de partículas violeta que repele y se conecta al cursor.
 export default function ParticleBackground() {
   const canvasRef = useRef(null);
   const mouse = useRef({ x: -9999, y: -9999 });
 
   useEffect(() => {
-    const el = canvasRef.current;
-    const parent = el.parentElement;
+    const el = canvasRef.current;       // el "lienzo" donde vamos a dibujar
+    const parent = el.parentElement;    // el "pincel" que usamos para dibujar en 2D
     const ctx = el.getContext('2d');
-    const N = 90;
-    const dots = [];
+    const N = 200;                      // vamos a crear 90 puntitos
+    const dots = [];                    // aquí guardamos todos los puntitos
     let raf;
 
     const resize = () => {
@@ -20,14 +20,14 @@ export default function ParticleBackground() {
     resize();
     for (let i = 0; i < N; i++) {
       dots.push({
-        x: Math.random() * el.width,
-        y: Math.random() * el.height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4
+        x: Math.random() * el.width,        // posición horizontal al azar
+        y: Math.random() * el.height,       // posición vertical al azar
+        vx: (Math.random() - 0.5) * 0.4,    // velocidad horizontal (puede ser + o -)
+        vy: (Math.random() - 0.5) * 0.4     // velocidad vertical (puede ser + o -)
       });
     }
 
-    const onMove = (e) => {
+    const onMove = (e) => {                                                   //Saber dónde está el ratón
       const rect = el.getBoundingClientRect();
       mouse.current = { x: e.clientX - rect.left, y: e.clientY - rect.top };
     };
@@ -37,17 +37,17 @@ export default function ParticleBackground() {
     parent.addEventListener('mouseleave', onLeave);
     window.addEventListener('resize', resize);
 
-    const tick = () => {
+    const tick = () => {                                                  //El bucle que se repite muchas veces por segundo (tick)
       ctx.clearRect(0, 0, el.width, el.height);
-      for (const d of dots) {
-        d.x += d.vx; d.y += d.vy;
-        if (d.x < 0 || d.x > el.width) d.vx *= -1;
+      for (const d of dots) {                                             //Mover cada canica y hacer que "huya" del ratón
+        d.x += d.vx; d.y += d.vy;                                         // la canica avanza según su velocidad
+        if (d.x < 0 || d.x > el.width) d.vx *= -1;                        // si choca con el borde, rebota
         if (d.y < 0 || d.y > el.height) d.vy *= -1;
         const dx = d.x - mouse.current.x, dy = d.y - mouse.current.y;
-        const distM = Math.hypot(dx, dy);
-        if (distM < 140) { d.x += (dx / distM) * 0.6; d.y += (dy / distM) * 0.6; }
+        const distM = Math.hypot(dx, dy);                                  // distancia entre la canica y el ratón
+        if (distM < 140) { d.x += (dx / distM) * 0.6; d.y += (dy / distM) * 0.6; }      // si está muy cerca (menos de 140px) la empujamos un poquito lejos del ratón
       }
-      for (let i = 0; i < dots.length; i++) {
+      for (let i = 0; i < dots.length; i++) {                               // Dibujar líneas entre canicas cercanas
         for (let j = i + 1; j < dots.length; j++) {
           const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
           const dist = Math.hypot(dx, dy);
@@ -60,7 +60,7 @@ export default function ParticleBackground() {
             ctx.stroke();
           }
         }
-        const dm = Math.hypot(dots[i].x - mouse.current.x, dots[i].y - mouse.current.y);
+        const dm = Math.hypot(dots[i].x - mouse.current.x, dots[i].y - mouse.current.y);      //Dibujar una línea de la canica al ratón, si está cerca
         if (dm < 140) {
           ctx.strokeStyle = `rgba(180,90,255,${0.3 * (1 - dm / 140)})`;
           ctx.beginPath();
@@ -68,12 +68,12 @@ export default function ParticleBackground() {
           ctx.lineTo(mouse.current.x, mouse.current.y);
           ctx.stroke();
         }
-        ctx.fillStyle = 'rgba(200,150,255,0.7)';
+        ctx.fillStyle = 'rgba(200,150,255,0.7)';                              //Dibujar el puntito
         ctx.beginPath();
         ctx.arc(dots[i].x, dots[i].y, 1.6, 0, Math.PI * 2);
         ctx.fill();
       }
-      raf = requestAnimationFrame(tick);
+      raf = requestAnimationFrame(tick);                                  //Repetir para siempre
     };
     tick();
 
