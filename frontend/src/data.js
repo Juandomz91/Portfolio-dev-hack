@@ -43,7 +43,7 @@ export const CONTENT = {
         rooms: [
           { name: "Pickle Rick", type: "webapp", status: "completada" },
           { name: "Letter", type: "OSINT", status: "completada" },
-          { name: "Nombre de la room #3", type: "redes", status: "en progreso" }
+          { name: "Watter bottle", type: "OSINT", status: "completada" }
         ]
       },
       skillsLabel: "Skills",
@@ -94,8 +94,8 @@ export const CONTENT = {
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
           { name: "Pickle Rick", type: "webapp", status: "terminée" },
-          { name: "Letter", type: "osint", status: "terminée" },
-          { name: "Room #3", type: "réseaux", status: "en cours" }
+          { name: "Letter", type: "OSINT", status: "terminée" },
+          { name: "Watter bottle", type: "OSINT", status: "terminée" }
         ]
       },
       skillsLabel: "Compétences",
@@ -145,9 +145,9 @@ export const CONTENT = {
         rank: "Rang / punts — pendent",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Pickle Rick", type: "webapp", status: "completada" },
-          { name: "Letter", type: "osint", status: "completada" },
-          { name: "Room #3", type: "xarxes", status: "en progrés" }
+        { name: "Pickle Rick", type: "webapp", status: "completada" },
+        { name: "Letter", type: "OSINT", status: "completada" },
+        { name: "Watter bottle", type: "OSINT", status: "completada" }
         ]
       },
       skillsLabel: "Skills",
@@ -198,8 +198,8 @@ export const CONTENT = {
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
           { name: "Pickle Rick", type: "webapp", status: "completed" },
-          { name: "Letter", type: "osint", status: "completed" },
-          { name: "Room name #3", type: "networking", status: "in progress" }
+          { name: "Letter", type: "OSINT", status: "completed" },
+          { name: "Watter bottle", type: "OSINT", status: "completed" }
         ]
       },
       skillsLabel: "Skills",
