@@ -9,7 +9,7 @@ export default function HexBackground() {
     const el = canvasRef.current;
     const parent = el.parentElement;
     const ctx = el.getContext('2d');
-    const r = 69;
+    const r = 20;
     const hexW = Math.sqrt(3) * r;
     const hexH = 1.5 * r;
     let cols = 0, rows = 0, raf;

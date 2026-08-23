@@ -58,7 +58,7 @@ export default function App() {
             <button style={devBtnStyle} onClick={() => setMode('dev')}>DEV</button>
             <button style={hackBtnStyle} onClick={() => setMode('hack')}>HACK</button>
           </div>
-         <div style={{ display: 'flex', gap: 8, fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: isDev ? '#6b665c' : nightMuted }}>
+          <div style={{ display: 'flex', gap: 8, fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: isDev ? '#6b665c' : nightMuted }}>
             <button style={langBtn('es')} onClick={() => setLang('es')}>ES</button>
             <span>/</span>
             <button style={langBtn('ca')} onClick={() => setLang('ca')}>CA</button>
@@ -76,8 +76,8 @@ export default function App() {
         <span style={styles.muted}>&copy; 2026 {t.name}</span>
         <div style={{ display: 'flex', gap: 20 }}>
           <a href="mailto:joandomz91@proton.me" style={styles.accentLink}>{t.email}</a>
-          <a href="https://es.linkedin.com/in/joandomzfdez" style={styles.accentLink}>LinkedIn</a>
-          <a href="https://github.com/Juandomz91" style={styles.accentLink}>GitHub</a>
+          <a href="https://es.linkedin.com/in/joandomzfdez" target="_blank" rel="noopener noreferrer" style={styles.accentLink}>LinkedIn</a>
+          <a href="https://github.com/Juandomz91" target="_blank" rel="noopener noreferrer" style={styles.accentLink}>GitHub</a>
         </div>
       </footer>
     </div>
@@ -191,13 +191,13 @@ function HackSection({ t }) {
         <div style={{ ...panel, marginBottom: 36 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 14 }}>
             <div style={{ fontSize: 12, color: violetAccent }}>./{t.tryhackmeLabel}</div>
-            <a href={t.tryhackme.profileUrl} style={{ fontSize: 12, color: violetAccent }}>@{t.tryhackme.username} &rarr;</a>
+            <a href={t.tryhackme.profileUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: violetAccent }}>@{t.tryhackme.username} &rarr;</a>
           </div>
           <div style={{ fontSize: 14, color: nightText, marginBottom: 14 }}>{t.tryhackme.rank}</div>
           {t.tryhackme.rooms.map((r) => (
             <div key={r.name} style={{ ...rowBorder, display: 'flex', justifyContent: 'space-between', gap: 12 }}>
               <span style={{ fontSize: 14, color: nightText }}>{r.name}</span>
-              <span style={{ fontSize: 12, color: violetAccent }}>{r.status}</span>
+              <span style={{ fontSize: 12, color: violetAccent }}>{r.type} · {r.status}</span>
             </div>
           ))}
         </div>

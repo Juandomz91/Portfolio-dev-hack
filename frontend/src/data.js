@@ -41,9 +41,9 @@ export const CONTENT = {
         rank: "Cibertoyako / puntos — pendiente",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Pickle Rick", status: "completada" },
-          { name: "Nombre de la room #2", status: "completada" },
-          { name: "Nombre de la room #3", status: "en progreso" }
+          { name: "Pickle Rick", type: "webapp", status: "completada" },
+          { name: "Letter", type: "OSINT", status: "completada" },
+          { name: "Nombre de la room #3", type: "redes", status: "en progreso" }
         ]
       },
       skillsLabel: "Skills",
@@ -60,14 +60,14 @@ export const CONTENT = {
       projectsLabel: "Projets",
       projects: [
         { tag: "01", title: "RecetaIA", desc: "Appli qui suggère des recettes à partir de 4 ingrédients que vous avez déjà chez vous, via l'API de ChatGPT.", stack: ["React", "Python", "OpenAI API"], linkLabel: "Voir le projet", link: "#", imgSrc: null, imgAlt: "Capture de RecetaIA" },
-        { tag: "02", title: "Can Cargol", desc: "Site web créé pour héberger un B’n’b et que les réservations ne passent pas par Booking ou Air B’n’b. Aujourd’hui, plus de 200 clients nous contactent chaque année par son intermédiaire.", stack: ["React", "Python", "CSS"], linkLabel: "Voir le projet", link: "#", imgSrc: "/assets/can-cargol-hero.png", imgAlt: "Capture de Can Cargol" }
+        { tag: "02", title: "Can Cargol", desc: "Site web créé pour héberger un B'n'b et que les réservations ne passent pas par Booking ou Air B'n'b. Aujourd'hui, plus de 200 clients nous contactent chaque année par son intermédiaire.", stack: ["React", "Python", "CSS"], linkLabel: "Voir le projet", link: "#", imgSrc: "/assets/can-cargol-hero.png", imgAlt: "Capture de Can Cargol" }
       ],
       skillsLabel: "Compétences",
       skills: ["React", "Python", "Flask", "REST APIs", "SQL", "Git", "CSS"]
     },
     hack: {
       kicker: "Portfolio — Mode Sécurité",
-      headline: "renverser la vapeur",
+      headline: "Renverser la vapeur",
       sub: "Apprenti en pentesting et CTF. Je casse des systèmes pour apprendre à les protéger.",
       toolsLabel: "Outils personnels",
       tools: [
@@ -93,9 +93,9 @@ export const CONTENT = {
         rank: "Rang / points — en attente",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Pickle Rick", status: "terminée" },
-          { name: "Room #2", status: "terminée" },
-          { name: "Room #3", status: "en cours" }
+          { name: "Pickle Rick", type: "webapp", status: "terminée" },
+          { name: "Letter", type: "osint", status: "terminée" },
+          { name: "Room #3", type: "réseaux", status: "en cours" }
         ]
       },
       skillsLabel: "Compétences",
@@ -145,9 +145,9 @@ export const CONTENT = {
         rank: "Rang / punts — pendent",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Pickle Rick", status: "completada" },
-          { name: "Room #2", status: "completada" },
-          { name: "Room #3", status: "en progrés" }
+          { name: "Pickle Rick", type: "webapp", status: "completada" },
+          { name: "Letter", type: "osint", status: "completada" },
+          { name: "Room #3", type: "xarxes", status: "en progrés" }
         ]
       },
       skillsLabel: "Skills",
@@ -197,9 +197,9 @@ export const CONTENT = {
         rank: "Rank / points — pending",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Pickle Rick", status: "completed" },
-          { name: "Room name #2", status: "completed" },
-          { name: "Room name #3", status: "in progress" }
+          { name: "Pickle Rick", type: "webapp", status: "completed" },
+          { name: "Letter", type: "osint", status: "completed" },
+          { name: "Room name #3", type: "networking", status: "in progress" }
         ]
       },
       skillsLabel: "Skills",
