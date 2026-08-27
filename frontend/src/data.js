@@ -109,7 +109,7 @@ export const CONTENT = {
     name: "Joan Domínguez Fernández",
     dev: {
       kicker: "Portfolio — Edició Desenvolupament",
-      headline: "Full-Stack & Producte",
+      headline: "Programació Full-Stack",
       sub: "React & Python, de la interfície a la base de dades.",
       projectsLabel: "Projectes",
       projects: [
