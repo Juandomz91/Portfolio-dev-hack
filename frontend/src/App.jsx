@@ -110,7 +110,7 @@ function DevSection({ t }) {
         <div style={{ padding: '64px 56px 12px' }}>
           <div style={label}>{t.projectsLabel}</div>
           {t.projects.map((p) => (
-            <div key={p.title} style={{ ...panel, display: 'grid', gridTemplateColumns: '100px 1fr 260px', gap: 32, alignItems: 'center', padding: 32, marginBottom: 24 }}>
+            <div key={p.title} style={{ ...panel, display: 'grid', gridTemplateColumns: '80px 1fr 480px', gap: 28, alignItems: 'stretch', padding: 24, marginBottom: 24 }}>
               <div style={{ fontFamily: "'Source Serif 4',serif", fontSize: 52, fontWeight: 600, color: devAccent, opacity: 0.4 }}>{p.tag}</div>
               <div>
                 <h3 style={{ fontFamily: "'Source Serif 4',serif", fontSize: 30, fontWeight: 600, margin: '0 0 10px', color: inkText }}>{p.title}</h3>
@@ -121,8 +121,8 @@ function DevSection({ t }) {
                 <a href={p.link} style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 13, fontWeight: 600, color: devAccent }}>{p.linkLabel} &rarr;</a>
               </div>
               {p.imgSrc
-                ? <img src={p.imgSrc} alt={p.imgAlt} style={{ width: '100%', height: 160, objectFit: 'cover', borderRadius: 4 }} />
-                : <div style={{ width: '100%', height: 160, background: '#e4e0d5', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#9a9384', fontFamily: "'JetBrains Mono',monospace", fontSize: 12, textAlign: 'center', padding: 8 }}>{p.imgAlt}</div>}
+                ? <img src={p.imgSrc} alt={p.imgAlt} style={{ width: '100%', height: '100%', minHeight: 280, objectFit: 'cover', borderRadius: 4, display: 'block' }} />
+                : <div style={{ width: '100%', height: '100%', minHeight: 280, background: '#e4e0d5', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#9a9384', fontFamily: "'JetBrains Mono',monospace", fontSize: 12, textAlign: 'center', padding: 8 }}>{p.imgAlt}</div>}
             </div>
           ))}
         </div>
