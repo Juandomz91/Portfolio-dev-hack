@@ -22,6 +22,9 @@ export default function HexBackground() {
     };
     resize();
 
+    const ro = new ResizeObserver(resize);
+    ro.observe(parent);
+
     const onMove = (e) => {
       const rect = el.getBoundingClientRect();
       mouse.current = { x: e.clientX - rect.left, y: e.clientY - rect.top };
@@ -66,6 +69,7 @@ export default function HexBackground() {
 
     return () => {
       cancelAnimationFrame(raf);
+      ro.disconnect();
       parent.removeEventListener('mousemove', onMove);
       parent.removeEventListener('mouseleave', onLeave);
       window.removeEventListener('resize', resize);
