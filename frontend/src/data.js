@@ -12,7 +12,7 @@ export const CONTENT = {
         { tag: "03", title: "Centraleta IA — Grup Eina (PoC)", desc: "Prueba de concepto de un agente de voz con IA para atención telefónica de talleres mecánicos. El sistema identifica al taller que llama, consulta y gestiona tickets de soporte técnico, y guía diagnósticos avanzados o consultas de información técnica de vehículos mediante un flujo conversacional completo en catalán.", stack: ["Vapi", "Telnyx", "Flask", "Deepgram Nova-3", "Azure TTS", "GPT-4o"], linkLabel: "Ver proyecto", link: "#", imgSrc: "/assets/Vapi.png", imgAlt: "Captura de Centraleta IA" }
       ],
       skillsLabel: "Habilidades",
-      skills: ["React", "Python", "Flask", "REST APIs", "SQL", "Git", "CSS"]
+      skills: ["Javascript", "React", "Python", "Flask", "REST APIs", "SQL", "Git", "CSS"]
     },
     hack: {
       kicker: "Portfolio — Ciberseguridad/Pentesting",
@@ -48,7 +48,7 @@ export const CONTENT = {
         ]
       },
       skillsLabel: "Skills",
-      skills: ["Pentesting web", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (HTB/THM)"]
+      skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
     },
     email: "E-mail"
   },
@@ -61,7 +61,7 @@ export const CONTENT = {
       projectsLabel: "Projets",
       projects: [
         { tag: "01", title: "RecetaIA", desc: "Appli qui suggère des recettes à partir de 4 ingrédients que vous avez déjà chez vous, via l'API de ChatGPT.", stack: ["React", "Python", "OpenAI API"], linkLabel: "Voir le projet", link: "#", imgSrc: "/assets/recetaia.png", imgAlt: "Capture de RecetaIA" },
-        { tag: "02", title: "Can Cargol", desc: "Site web créé pour héberger un B'n'b et que les réservations ne passent pas par Booking ou Air B'n'b. Aujourd'hui, plus de 200 clients nous contactent chaque année par son intermédiaire.", stack: ["React", "Python", "CSS"], linkLabel: "Voir le projet", link: "#", imgSrc: "/assets/can-cargol-hero.png", imgAlt: "Capture de Can Cargol" },
+        { tag: "02", title: "Can Cargol", desc: "Site web créé pour héberger un B'n'b et que les réservations ne passent pas par Booking ou Air B'n'b. Aujourd'hui, plus de 200 clients nous contactent chaque année par son intermédiaire.", stack: ["React", "Python", "CSS"], linkLabel: "Voir le projet", link: "#", imgSrc: "/assets/can cargol.png", imgAlt: "Capture de Can Cargol" },
         { tag: "03", title: "Centraleta IA — Grup Eina (PoC)", desc: "Preuve de concept d'un agent vocal IA pour l'accueil téléphonique de garages automobiles. Le système identifie le garage appelant, consulte et gère les tickets de support technique, et guide les diagnostics avancés ou les consultations d'informations techniques de véhicules via un flux conversationnel complet en catalan.", stack: ["Vapi", "Telnyx", "Flask", "Deepgram Nova-3", "Azure TTS", "GPT-4o"], linkLabel: "Voir le projet", link: "#", imgSrc: "/assets/Vapi.png", imgAlt: "Capture de Centraleta IA" }
       ],
       skillsLabel: "Compétences",
@@ -101,7 +101,7 @@ export const CONTENT = {
         ]
       },
       skillsLabel: "Compétences",
-      skills: ["Pentest web", "Linux", "Nmap", "Burp Suite", "Scripting Python", "CTFs (HTB/THM)"]
+      skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
     },
     email: "Email"
   },
@@ -114,11 +114,11 @@ export const CONTENT = {
       projectsLabel: "Projectes",
       projects: [
         { tag: "01", title: "RecetaIA", desc: "App que suggereix receptes a partir de 4 ingredients que ja tens a casa, mitjançant l'API de ChatGPT.", stack: ["React", "Python", "OpenAI API"], linkLabel: "Veure projecte", link: "#", imgSrc: "/assets/recetaia.png", imgAlt: "Captura de RecetaIA" },
-        { tag: "02", title: "Can Cargol", desc: "Website creat per hostejar un b'n'b i que les reserves no passin per Booking o Air b'n'b. A día d'avui més de 200 clients a l'any ens contacten a través de la web.", stack: ["React", "Python", "CSS"], linkLabel: "Veure projecte", link: "#", imgSrc: "/assets/can-cargol-hero.png", imgAlt: "Captura de Can Cargol" },
+        { tag: "02", title: "Can Cargol", desc: "Website creat per hostejar un b'n'b i que les reserves no passin per Booking o Air b'n'b. A día d'avui més de 200 clients a l'any ens contacten a través de la web.", stack: ["React", "Python", "CSS"], linkLabel: "Veure projecte", link: "#", imgSrc: "/assets/can cargol.png", imgAlt: "Captura de Can Cargol" },
         { tag: "03", title: "Centraleta IA — Grup Eina (PoC)", desc: "Prova de concepte d'un agent de veu amb IA per a l'atenció telefònica de tallers mecànics. El sistema identifica el taller que truca, consulta i gestiona tiquets de suport tècnic, i guia diagnòstics avançats o consultes d'informació tècnica de vehicles mitjançant un flux conversacional complet en català.", stack: ["Vapi", "Telnyx", "Flask", "Deepgram Nova-3", "Azure TTS", "GPT-4o"], linkLabel: "Veure projecte", link: "#", imgSrc: "/assets/Vapi.png", imgAlt: "Captura de Centraleta IA" }
       ],
       skillsLabel: "Habilitats",
-      skills: ["React", "Python", "Flask", "REST APIs", "SQL", "Git", "CSS"]
+      skills: ["Javascript", "React", "Python", "Flask", "REST APIs", "SQL", "Git", "CSS"]
     },
     hack: {
       kicker: "Portfolio — Ciberseguretat/Pentesting",
@@ -154,7 +154,7 @@ export const CONTENT = {
         ]
       },
       skillsLabel: "Skills",
-      skills: ["Pentesting web", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (HTB/THM)"]
+      skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
     },
     email: "Email"
   },
@@ -167,7 +167,7 @@ export const CONTENT = {
       projectsLabel: "Projects",
       projects: [
         { tag: "01", title: "RecetaIA", desc: "App that suggests recipes from 4 ingredients you already have at home, using the ChatGPT API.", stack: ["React", "Python", "OpenAI API"], linkLabel: "View project", link: "#", imgSrc: "/assets/recetaia.png", imgAlt: "RecetaIA screenshot" },
-        { tag: "02", title: "Can Cargol", desc: "Website created for hosting a b'n'b and that reservations do not go through Booking or Air b'n'b. Today, more than 200 customers a year contact us through it.", stack: ["React", "Python", "CSS"], linkLabel: "View project", link: "#", imgSrc: "/assets/can-cargol-hero.png", imgAlt: "Can Cargol screenshot" },
+        { tag: "02", title: "Can Cargol", desc: "Website created for hosting a b'n'b and that reservations do not go through Booking or Air b'n'b. Today, more than 200 customers a year contact us through it.", stack: ["React", "Python", "CSS"], linkLabel: "View project", link: "#", imgSrc: "/assets/can cargol.png", imgAlt: "Can Cargol screenshot" },
         { tag: "03", title: "Centraleta IA — Grup Eina (PoC)", desc: "Proof of concept of an AI voice agent for handling phone support at car repair shops. The system identifies the calling workshop, queries and manages technical support tickets, and guides advanced diagnostics or vehicle technical information queries through a complete conversational flow in Catalan.", stack: ["Vapi", "Telnyx", "Flask", "Deepgram Nova-3", "Azure TTS", "GPT-4o"], linkLabel: "View project", link: "#", imgSrc: "/assets/Vapi.png", imgAlt: "Centraleta IA screenshot" }
       ],
       skillsLabel: "Skills",
@@ -207,7 +207,7 @@ export const CONTENT = {
         ]
       },
       skillsLabel: "Skills",
-      skills: ["Web pentesting", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (HTB/THM)"]
+      skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
     },
     email: "E-mail"
   }
