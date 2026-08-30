@@ -9,7 +9,8 @@ export const CONTENT = {
       projects: [
         { tag: "01", title: "RecetaIA", desc: "App que sugiere recetas a partir de 4 ingredientes que ya tienes en casa, usando la API de ChatGPT.", stack: ["React", "Python", "OpenAI API"], linkLabel: "Ver proyecto", link: "#", imgSrc: "/assets/recetaia.png", imgAlt: "Captura de RecetaIA" },
         { tag: "02", title: "Can Cargol", desc: "Website creado para hostear un b'n'b y que las reservas no pasen por Booking o Air b'n'b. A día de hoy más de 200 clientes al año nos contactan a través de ella.", stack: ["React", "Python", "CSS"], linkLabel: "Ver proyecto", link: "#", imgSrc: "/assets/can cargol.png", imgAlt: "Captura de Can Cargol" },
-        { tag: "03", title: "Centraleta IA — Grup Eina (PoC)", desc: "Prueba de concepto de un agente de voz con IA para atención telefónica de talleres mecánicos. El sistema identifica al taller que llama, consulta y gestiona tickets de soporte técnico, y guía diagnósticos avanzados o consultas de información técnica de vehículos mediante un flujo conversacional completo en catalán.", stack: ["Vapi", "Telnyx", "Flask", "Deepgram Nova-3", "Azure TTS", "GPT-4o"], linkLabel: "Ver proyecto", link: "#", imgSrc: "/assets/Vapi.png", imgAlt: "Captura de Centraleta IA" }
+        { tag: "03", title: "Centraleta IA — Grup Eina (PoC)", desc: "Prueba de concepto de un agente de voz con IA para atención telefónica de talleres mecánicos. El sistema identifica al taller que llama, consulta y gestiona tickets de soporte técnico, y guía diagnósticos avanzados o consultas de información técnica de vehículos mediante un flujo conversacional completo en catalán.", stack: ["Vapi", "Telnyx", "Flask", "Deepgram Nova-3", "Azure TTS", "GPT-4o"], linkLabel: "Ver proyecto", link: "#", imgSrc: "/assets/Vapi.png", imgAlt: "Captura de Centraleta IA" },
+        { tag: "03", title: "Arreu Campers", desc: "Website encarada a mostrar los proyectos de camperización que hace Norberto", stack: ["React", "Python", "CSS", ""], linkLabel: "Ver proyecto", link: "#", imgSrc: "/assets/Vapi.png", imgAlt: "Captura de Centraleta IA" }
       ],
       skillsLabel: "Habilidades",
       skills: ["Javascript", "React", "Python", "Flask", "REST APIs", "SQL", "Git", "CSS"]
@@ -39,12 +40,14 @@ export const CONTENT = {
       tryhackmeLabel: "TryHackMe",
       tryhackme: {
         username: "Cnidari-THM",
-        rank: "Cibertoyako / puntos — pendiente",
+        rank: "Voyager — pendiente",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
           { name: "Pickle Rick", type: "webapp", status: "completada" },
           { name: "Letter", type: "OSINT", status: "completada" },
-          { name: "Watter bottle", type: "OSINT", status: "completada" }
+          { name: "Watter bottle", type: "OSINT", status: "completada" },
+          { name: "Overhead at breakfast", type: "OSINT", status: "completada" },
+          { name: "The Game", type: "Game hacking", status: "completada" }
         ]
       },
       skillsLabel: "Skills",
