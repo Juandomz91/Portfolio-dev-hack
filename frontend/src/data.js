@@ -40,14 +40,15 @@ export const CONTENT = {
       tryhackmeLabel: "TryHackMe",
       tryhackme: {
         username: "Cnidari-THM",
-        rank: "Voyager — pendiente",
+        rank: "Adept — pendiente",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
           { name: "Pickle Rick", type: "webapp", status: "completada" },
           { name: "Letter", type: "OSINT", status: "completada" },
           { name: "Watter bottle", type: "OSINT", status: "completada" },
           { name: "Overhead at breakfast", type: "OSINT", status: "completada" },
-          { name: "The Game", type: "Game hacking", status: "completada" }
+          { name: "The Game", type: "Game hacking", status: "completada" },
+          { name: "Carnage", type: "Blue team", status: "completada" }
         ]
       },
       skillsLabel: "Skills",
@@ -95,12 +96,15 @@ export const CONTENT = {
       tryhackmeLabel: "TryHackMe",
       tryhackme: {
         username: "Cnidari",
-        rank: "Rang / points — en attente",
+        rank: "Adepte / 1328 points ",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
-          { name: "Pickle Rick", type: "webapp", status: "terminée" },
-          { name: "Letter", type: "OSINT", status: "terminée" },
-          { name: "Watter bottle", type: "OSINT", status: "terminée" }
+          { name: "Pickle Rick", type: "webapp", status: "completée" },
+          { name: "Letter", type: "OSINT", status: "completée" },
+          { name: "Watter bottle", type: "OSINT", status: "completée" },
+          { name: "Overhead at breakfast", type: "OSINT", status: "completée" },
+          { name: "The Game", type: "Game hacking", status: "completée" },
+          { name: "Carnage", type: "Blue team", status: "completée" }
         ]
       },
       skillsLabel: "Compétences",
@@ -129,8 +133,8 @@ export const CONTENT = {
       sub: "Aprenent de pentesting i CTFs. Trenco sistemes per aprendre a protegir-los.",
       toolsLabel: "Eines pròpies",
       tools: [
-        { name: "Portscanner.py", desc: "Breu descripció — reemplaça amb la teva eina." },
-        { name: "ARP_Spoofer.py", desc: "Breu descripció — reemplaça amb la teva eina." },
+        { name: "Portscanner.py", desc: "Analisis de ports disponibles escrit en Python." },
+        { name: "ARP_Spoofer.py", desc: "Script que envia missatges falsos a la xarxa local fent servir el protocol ARP." },
         { name: "nom-eina-3", desc: "Breu descripció — reemplaça amb la teva eina." }
       ],
       writeupsLabel: "Writeups",
@@ -148,13 +152,17 @@ export const CONTENT = {
       tryhackmeLabel: "TryHackMe",
       tryhackme: {
         username: "Cnidari",
-        rank: "Rang / punts — pendent",
+        rank: "Adepte / 1328 punts",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
           { name: "Pickle Rick", type: "webapp", status: "completada" },
           { name: "Letter", type: "OSINT", status: "completada" },
-          { name: "Watter bottle", type: "OSINT", status: "completada" }
+          { name: "Watter bottle", type: "OSINT", status: "completada" },
+          { name: "Overhead at breakfast", type: "OSINT", status: "completada" },
+          { name: "The Game", type: "Game hacking", status: "completada" },
+          { name: "Carnage", type: "Blue team", status: "completada" }
         ]
+        
       },
       skillsLabel: "Skills",
       skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
@@ -201,13 +209,17 @@ export const CONTENT = {
       tryhackmeLabel: "TryHackMe",
       tryhackme: {
         username: "Cnidari",
-        rank: "Rank / points — pending",
+        rank: "Adept / 1328 points",
         profileUrl: "https://tryhackme.com/p/Cnidari",
         rooms: [
           { name: "Pickle Rick", type: "webapp", status: "completed" },
           { name: "Letter", type: "OSINT", status: "completed" },
-          { name: "Watter bottle", type: "OSINT", status: "completed" }
+          { name: "Watter bottle", type: "OSINT", status: "completed" },
+          { name: "Overhead at breakfast", type: "OSINT", status: "completed" },
+          { name: "The Game", type: "Game hacking", status: "completed" },
+          { name: "Carnage", type: "Blue team", status: "completed" }
         ]
+        
       },
       skillsLabel: "Skills",
       skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
