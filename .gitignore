@@ -1,0 +1,13 @@
+# Python — cualquier venv, esté donde esté y se llame como se llame
+venv*/
+.venv*/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+frontend/dist/
+
+# Secretos — nunca subir credenciales reales
+.env
+backend/.env
