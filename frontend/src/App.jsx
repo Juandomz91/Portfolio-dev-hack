@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CONTENT } from './data.js';
 import HexBackground from './components/HexBackground.jsx';
 import ParticleBackground from './components/ParticleBackground.jsx';
@@ -74,6 +74,7 @@ export default function App() {
 
       <footer style={styles.footer}>
         <span style={styles.muted}>&copy; 2026 {t.name}</span>
+        <ContactForm t={t.contact} isDev={isDev} accent={isDev ? devAccent : violetAccent} />
         <div style={{ display: 'flex', gap: 20 }}>
           <a href="mailto:joandomz91@proton.me" style={styles.accentLink}>{t.email}</a>
           <a href="https://es.linkedin.com/in/joandomzfdez" target="_blank" rel="noopener noreferrer" style={styles.accentLink}>LinkedIn</a>
@@ -141,6 +142,20 @@ function DevSection({ t }) {
 }
 
 function HackSection({ t }) {
+  // apiThm empieza en null (todavía no hemos preguntado al backend).
+  // Si el fetch tiene éxito, apiThm manda — pero ojo: esos datos vienen
+  // en el idioma fijo que tenga app.py, NO se traducen según `lang`.
+  // Si el backend no responde (apagado, o sitio alojado sin backend),
+  // apiThm se queda en null y usamos t.tryhackme, que sí está traducido.
+  const [apiThm, setApiThm] = useState(null);
+  useEffect(() => {
+    fetch('/api/tryhackme')
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then(setApiThm)
+      .catch(() => {});
+  }, []);
+  const thm = apiThm || t.tryhackme;
+
   const panel = {
     border: '1px solid rgba(255,255,255,0.08)', borderRadius: 6,
     background: 'rgba(10,14,23,0.55)', backdropFilter: 'blur(2px)', padding: '20px 22px'
@@ -191,10 +206,10 @@ function HackSection({ t }) {
         <div style={{ ...panel, marginBottom: 36 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 14 }}>
             <div style={{ fontSize: 12, color: violetAccent }}>./{t.tryhackmeLabel}</div>
-            <a href={t.tryhackme.profileUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: violetAccent }}>@{t.tryhackme.username} &rarr;</a>
+            <a href={thm.profileUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: violetAccent }}>@{thm.username} &rarr;</a>
           </div>
-          <div style={{ fontSize: 14, color: nightText, marginBottom: 14 }}>{t.tryhackme.rank}</div>
-          {t.tryhackme.rooms.map((r) => (
+          <div style={{ fontSize: 14, color: nightText, marginBottom: 14 }}>{thm.rank}</div>
+          {thm.rooms.map((r) => (
             <div key={r.name} style={{ ...rowBorder, display: 'flex', justifyContent: 'space-between', gap: 12 }}>
               <span style={{ fontSize: 14, color: nightText }}>{r.name}</span>
               <span style={{ fontSize: 12, color: violetAccent }}>{r.type} · {r.status}</span>
@@ -210,5 +225,68 @@ function HackSection({ t }) {
         </div>
       </div>
     </div>
+  );
+}
+
+// Formulario compacto del footer. Envía a POST /api/contact (backend Flask).
+// name se deriva del email para no añadir un tercer campo — el backend solo
+// lo usa para el asunto del correo.
+function ContactForm({ t, isDev, accent }) {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('idle'); // idle | sending | ok | error
+
+  const inputStyle = {
+    fontFamily: "'JetBrains Mono',monospace", fontSize: 12,
+    background: 'transparent', color: 'inherit', outline: 'none',
+    border: `1px solid ${isDev ? 'rgba(0,0,0,0.25)' : 'rgba(255,255,255,0.2)'}`,
+    borderRadius: 4, padding: '6px 10px'
+  };
+  const btnStyle = {
+    fontFamily: "'JetBrains Mono',monospace", fontSize: 12, fontWeight: 700,
+    background: accent, color: '#0c0d10', border: 'none', borderRadius: 4,
+    padding: '6px 14px', cursor: status === 'sending' ? 'default' : 'pointer',
+    opacity: status === 'sending' ? 0.6 : 1
+  };
+
+  const submit = async (e) => {
+    e.preventDefault();
+    if (!email.trim() || !message.trim() || status === 'sending') return;
+    setStatus('sending');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: email.split('@')[0], email, message })
+      });
+      if (!res.ok) throw new Error('request failed');
+      setStatus('ok');
+      setMessage('');
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  if (status === 'ok') {
+    return <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: accent }}>{t.successMessage}</span>;
+  }
+
+  return (
+    <form onSubmit={submit} style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+      <input
+        type="email" required placeholder={t.emailPlaceholder} value={email}
+        onChange={(e) => setEmail(e.target.value)} style={{ ...inputStyle, width: 140 }}
+      />
+      <input
+        type="text" required placeholder={t.messagePlaceholder} value={message}
+        onChange={(e) => setMessage(e.target.value)} style={{ ...inputStyle, width: 200 }}
+      />
+      <button type="submit" style={btnStyle} disabled={status === 'sending'}>
+        {status === 'sending' ? t.sendingLabel : t.submitLabel}
+      </button>
+      {status === 'error' && (
+        <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: '#e05a5a' }}>{t.errorMessage}</span>
+      )}
+    </form>
   );
 }

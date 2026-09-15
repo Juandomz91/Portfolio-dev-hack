@@ -55,7 +55,15 @@ export const CONTENT = {
       skillsLabel: "Skills",
       skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
     },
-    email: "E-mail"
+    email: "E-mail",
+    contact: {
+      emailPlaceholder: "Tu email",
+      messagePlaceholder: "Escribe un mensaje...",
+      submitLabel: "Enviar",
+      sendingLabel: "Enviando...",
+      successMessage: "¡Mensaje enviado! Te responderé pronto.",
+      errorMessage: "No se pudo enviar. Prueba de nuevo o escríbeme directamente."
+    }
   },
   fr: {
     name: "Joan Domínguez Fernández",
@@ -113,7 +121,15 @@ export const CONTENT = {
       skillsLabel: "Compétences",
       skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
     },
-    email: "Email"
+    email: "Email",
+    contact: {
+      emailPlaceholder: "Votre email",
+      messagePlaceholder: "Écrivez un message...",
+      submitLabel: "Envoyer",
+      sendingLabel: "Envoi...",
+      successMessage: "Message envoyé ! Je vous répondrai bientôt.",
+      errorMessage: "Échec de l'envoi. Réessayez ou écrivez-moi directement."
+    }
   },
   ca: {
     name: "Joan Domínguez Fernández",
@@ -170,7 +186,15 @@ export const CONTENT = {
       skillsLabel: "Skills",
       skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
     },
-    email: "Email"
+    email: "Email",
+    contact: {
+      emailPlaceholder: "El teu email",
+      messagePlaceholder: "Escriu un missatge...",
+      submitLabel: "Enviar",
+      sendingLabel: "Enviant...",
+      successMessage: "Missatge enviat! Et respondré aviat.",
+      errorMessage: "No s'ha pogut enviar. Torna-ho a provar o escriu-me directament."
+    }
   },
   en: {
     name: "Joan Domínguez Fernández",
@@ -227,6 +251,14 @@ export const CONTENT = {
       skillsLabel: "Skills",
       skills: ["Web pentesting", "Whireshark", "Linux", "Nmap", "Burp Suite", "Python scripting", "CTFs (THM)"]
     },
-    email: "E-mail"
+    email: "E-mail",
+    contact: {
+      emailPlaceholder: "Your email",
+      messagePlaceholder: "Write a message...",
+      submitLabel: "Send",
+      sendingLabel: "Sending...",
+      successMessage: "Message sent! I'll get back to you soon.",
+      errorMessage: "Couldn't send it. Try again or email me directly."
+    }
   }
 };
